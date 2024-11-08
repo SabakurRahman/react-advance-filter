@@ -1,0 +1,18 @@
+.recomended-flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-left: 17rem;
+  z-index: -2;
+}
+
+.recomended-title {
+  margin-left: 275px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: sans-serif;
+}
