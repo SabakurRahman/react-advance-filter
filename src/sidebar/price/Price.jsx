@@ -2,9 +2,16 @@ import "./Price.css";
 
 const Price = () => {
   return (
-    <div>
-      <h1>Price</h1>
-    </div>
+    <>
+      <div className="ml">
+        <h2 className="sidebar-title price-title">Price</h2>
+
+        <label className="sidebar-label-container">
+          <input type="radio" value="" name="test2" />
+          <span className="checkmark"></span>All
+        </label>
+      </div>
+    </>
   );
 };
 
