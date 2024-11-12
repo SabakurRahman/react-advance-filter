@@ -5,6 +5,16 @@ import Recomoneded from "./recomended/Recomended";
 import Sidebar from "./sidebar/Sidebar";
 
 function App() {
+  const [selectCategory, setSelectCategory] = useState(null);
+  const [selectPrice, setSelectPrice] = useState(null);
+  const [selectColor, setSelectColor] = useState(null);
+
+  const [query, setQuery] = useState("");
+
+  const handleInputChange = (e) => {
+    setQuery(e.target.value);
+  };
+
   return (
     <>
       <Sidebar />

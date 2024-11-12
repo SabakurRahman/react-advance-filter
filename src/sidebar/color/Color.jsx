@@ -1,22 +1,12 @@
+import Input from "../../components/Input";
 import "./Color.css";
 
 const Color = () => {
   return (
     <div>
       <div>
-        <h2 className="sidebar-title price-title">Color</h2>
-        <label className="sidebar-label-container">
-          <input type="radio" name="test" />
-          <span className="checkmark"></span>All
-        </label>
-        <label className="sidebar-label-container">
-          <input type="radio" name="test" />
-          <span className="checkmark"></span>Black
-        </label>
-        <label className="sidebar-label-container">
-          <input type="radio" name="test" />
-          <span className="checkmark"></span>Red
-        </label>
+        <h2 className="sidebar-title color-title">Color</h2>
+        <Input />
       </div>
     </div>
   );
