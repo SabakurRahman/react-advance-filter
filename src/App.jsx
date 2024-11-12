@@ -1,13 +1,15 @@
+import { useState } from "react";
 import "./App.css";
 import NavBar from "./navigation/NavBar";
 import Product from "./product/Product";
 import Recomoneded from "./recomended/Recomended";
 import Sidebar from "./sidebar/Sidebar";
 
+import dataProduct from "./db/db";
+import Card from "./components/Card";
+
 function App() {
   const [selectCategory, setSelectCategory] = useState(null);
-  const [selectPrice, setSelectPrice] = useState(null);
-  const [selectColor, setSelectColor] = useState(null);
 
   const [query, setQuery] = useState("");
 
@@ -15,12 +17,20 @@ function App() {
     setQuery(e.target.value);
   };
 
+  const handleChange = (event) => {
+    setSelectCategory(event.target.value);
+  };
+
+  const handleClick = () => {
+    console.log(selectCategory);
+  };
+
   return (
     <>
       <Sidebar />
       <NavBar />
       <Recomoneded />
-      <Product />
+      <Product dataProduct={dataProduct} />
     </>
   );
 }

@@ -1,15 +1,12 @@
 import { IoBag } from "react-icons/io5";
 import { FaStar } from "react-icons/fa";
-const Card = () => {
+const Card = ({ product }) => {
   return (
     <section className="card">
-      <img
-        src="https://m.media-amazon.com/images/I/6125yAfsJKL._AC_UX575_.jpg"
-        alt="shoe"
-      />
+      <img src={product.img} alt="shoe" />
 
       <div className="card-details">
-        <h3 className="card-title">Product Name</h3>
+        <h3 className="card-title">{product.title}</h3>
         <section className="card-review">
           <FaStar className="card-rating" />
           <FaStar className="card-rating" />
@@ -19,7 +16,7 @@ const Card = () => {
         </section>
         <section className="card-price">
           <span className="price">
-            <del>$300</del> $200
+            <del>{product.prevPrice}</del> {product.newPrice}
           </span>
           <div className="bag-icon">
             <IoBag />

@@ -1,15 +1,14 @@
 import "./Product.css";
 
 import Card from "../components/Card";
-const Product = () => {
+import { LuGalleryHorizontal } from "react-icons/lu";
+const Product = ({ dataProduct }) => {
   return (
     <>
       <section className="card-container">
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {dataProduct.map((product) => (
+          <Card product={product} />
+        ))}
       </section>
     </>
   );
