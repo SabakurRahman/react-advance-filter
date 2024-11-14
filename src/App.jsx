@@ -17,6 +17,10 @@ function App() {
     setQuery(e.target.value);
   };
 
+  const filteredItems = dataProduct.filter(
+    (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
+  );
+
   const handleChange = (event) => {
     setSelectCategory(event.target.value);
   };
@@ -25,12 +29,41 @@ function App() {
     console.log(selectCategory);
   };
 
+  function filteredData(products, selected, query) {
+    let filteredProducts = products;
+
+    // Filtering Input Items
+    if (query) {
+      filteredProducts = filteredItems;
+    }
+
+    // Applying selected filter
+    if (selected) {
+      filteredProducts = filteredProducts.filter(
+        ({ category, color, company, newPrice, title }) =>
+          category === selected ||
+          color === selected ||
+          company === selected ||
+          newPrice === selected ||
+          title === selected
+      );
+    }
+
+    return filteredProducts.map((product) => (
+      <Card key={Math.random()} product={product} />
+    ));
+  }
+
+  const result = filteredData(dataProduct, selectCategory, query);
+
+  console.log(result[0]);
+
   return (
     <>
       <Sidebar />
       <NavBar />
       <Recomoneded />
-      <Product dataProduct={dataProduct} />
+      <Product result={result} />
     </>
   );
 }

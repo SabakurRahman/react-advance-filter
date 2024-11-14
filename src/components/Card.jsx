@@ -12,7 +12,7 @@ const Card = ({ product }) => {
           <FaStar className="card-rating" />
           <FaStar className="card-rating" />
           <FaStar className="card-rating" />
-          <span className="total-review">4</span>
+          <span className="total-review">{product.reviews}</span>
         </section>
         <section className="card-price">
           <span className="price">
