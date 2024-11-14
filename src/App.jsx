@@ -28,7 +28,7 @@ function App() {
   const handleClick = (event) => {
     setSelectCategory(event.target.value);
   };
-  console.log(selectCategory);
+  // console.log(selectCategory);
 
   function filteredData(products, selected, query) {
     let filteredProducts = products;
@@ -60,7 +60,7 @@ function App() {
   return (
     <>
       <Sidebar handleChange={handleChange} />
-      <NavBar />
+      <NavBar handleInputChange={handleInputChange} />
       <Recomoneded handleClick={handleClick} />
       <Product result={result} />
     </>
