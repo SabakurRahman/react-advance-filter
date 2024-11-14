@@ -1,15 +1,25 @@
 import "./Recomended.css";
-const Recomoneded = () => {
+const Recomoneded = ({ handleClick }) => {
   return (
     <>
       <div className="recomended">
         <h2 className="recomended-title">Recomended</h2>
         <div className="recomended-flex">
-          <button className="btns">All Product</button>
-          <button className="btns">Nike</button>
-          <button className="btns">Adidas</button>
-          <button className="btns">Puma</button>
-          <button className="btns">Vans</button>
+          <button onClick={handleClick} className="btns">
+            All Product
+          </button>
+          <button onClick={handleClick} className="btns" value="Nike">
+            Nike
+          </button>
+          <button onClick={handleClick} className="btns" value="Adidas">
+            Adidas
+          </button>
+          <button onClick={handleClick} className="btns" value="Puma">
+            Puma
+          </button>
+          <button onClick={handleClick} className="btns" value="Vans">
+            Vans
+          </button>
         </div>
       </div>
     </>
